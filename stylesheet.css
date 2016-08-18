@@ -17,15 +17,14 @@
   margin: 0 20px;
   font-family: 'Roboto';
 }
-#submit-button{
-}
+
 #limitation{
   color:yellow;
   background-color: red;
   font-family: 'Roboto';
 }
 #results{
-  font-family: Courier;
+  font-family: 'Roboto';
   text-align: center;
 }
 #footer{
