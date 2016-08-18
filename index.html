@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-  <script src="scripts.js"></script>
+  <!--<script src="scripts.js"></script>-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -40,21 +40,8 @@
       <label for="usr">Title:</label>
       <input type="text" class="form-control" id="usr" ng-model="board.title">
     </div>
-    <!--
-    <div id="form">
-      <form>
-        <input type="text" name="data" id="inputbox" placeholder="Enter text here">
-        <input type="submit" id="submit-button" value="Submit">
-        <div>
-          <input type="checkbox" name="caps" id="caps-checkbox" value="1"> Use capitals
-        </div>
-
-      </form>
-    </div>
-    -->
     <p>
       <div id="results" ng-controller="LetterCounter">
-        <!--<script>countLetters()</script>-->
         Results:
         <pre>{{countLetters(board.title)}}</pre>
       </div>
@@ -68,14 +55,12 @@
     <div id="changelog">
       <strong>Changelog</strong>
       <ul>
-        <li>August 17, 2016 - Fixed compatibility issues</li> 
+        <li>August 17, 2016 - Fixed compatibility issues</li>
         <li>August 17, 2016 - Revert to old version to fix compatibility issues</li>
         <li>August 16, 2016 - The count of letters automatically update. Capital letters counted separately from lowercase letters.</li>
-        <li>March 10, 2016 - Moved the capital letter checkbox below search bar.
-        </li>
+        <li>March 10, 2016 - Moved the capital letter checkbox below search bar.</li>
         <li>March 6, 2016 - Added the option to count with capital letters.</li>
-        <li>March 6, 2016 - Changed font and added some visual element changes.
-        </li>
+        <li>March 6, 2016 - Changed font and added some visual element changes.</li>
         <li>January 19, 2016 - Should accurately count all characters.</li>
       </ul>
     </div>
@@ -83,14 +68,8 @@
 </body>
 
 </html>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
-
-<!-- Angular Material Library -->
-<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
-
 <script type="text/javascript">    
     var myApp = angular.module('LetterCounterApp', []);
-
     myApp.controller('LetterCounter', ['$scope', function($scope){
       $scope.double = function (value = 0) { return value * 2; };
       $scope.countLetters = 
@@ -117,7 +96,3 @@
     }]);
 
   </script>
-
-</body>
-
-</html>
