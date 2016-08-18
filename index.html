@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,19 +13,14 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
-
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
     crossorigin="anonymous">
-
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
-
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-
 </head>
-
 <body ng-app="LetterCounterApp">
   <div id="title">
     <h1>Welcome to letter count!</h1>
@@ -37,8 +31,7 @@
 
   <div class="container" ng-controller="LetterCounter">
     <div class="form-group">
-      <label for="usr">Title:</label>
-      <input type="text" class="form-control" id="usr" ng-model="board.title">
+      <input type="text" class="form-control" id="usr" placeholder="Title" ng-model="board.title">
     </div>
     <div class="checkbox">
       <label><input type="checkbox" ng-model="checkboxModel.ignoreCapitals">Ignore capital letters</label>
@@ -69,7 +62,6 @@
     </div>
   </div>
 </body>
-
 </html>
 <script type="text/javascript">    
     var myApp = angular.module('LetterCounterApp', []);
@@ -102,5 +94,4 @@
           return textIn;
         };
     }]);
-
   </script>
