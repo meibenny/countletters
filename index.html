@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,18 @@
   <title>Letter Count</title>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-  <!--<script src="scripts.js"></script>-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
-  <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
     crossorigin="anonymous">
-  <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <script src="scripts.js"></script>
 </head>
+
 <body ng-app="LetterCounterApp">
   <div id="title">
     <h1>Welcome to letter count!</h1>
@@ -28,7 +27,6 @@
   <div id="readme">
     <p>Please enter text into the box below and we will count the multiplicity of each character!</p>
   </div>
-
   <div class="container" ng-controller="LetterCounter">
     <div class="form-group">
       <input type="text" class="form-control" id="usr" placeholder="Title" ng-model="board.title">
@@ -62,36 +60,5 @@
     </div>
   </div>
 </body>
+
 </html>
-<script type="text/javascript">    
-    var myApp = angular.module('LetterCounterApp', []);
-    myApp.controller('LetterCounter', ['$scope', function($scope){
-      $scope.checkboxModel = {
-        ignoreCapitals: false
-      }
-      $scope.countLetters = 
-        function (title = ""){
-          var textIn = title;
-          if($scope.checkboxModel.ignoreCapitals){
-            textIn = textIn.toLowerCase();
-          }
-          var char_count = new Object();
-          var textIn_length = textIn.length;
-          for(var i = 0; i < textIn_length; i++){
-            if(!(textIn.charAt(i) == " ")){
-              char_count[textIn.charAt(i)] = 0;
-            }
-          }
-          for(var i = 0; i < textIn_length; i++){
-            if(!(textIn.charAt(i) == " ")){
-              char_count[textIn.charAt(i)] += 1;
-            }
-          }
-          textIn = "";
-          for(var eachProperty in char_count){
-            textIn += eachProperty + " " + char_count[eachProperty] + "\n";
-          }
-          return textIn;
-        };
-    }]);
-  </script>
