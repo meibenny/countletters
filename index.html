@@ -27,18 +27,22 @@
   </div>
   <div class="container" ng-controller="LetterCounter">
     <div class="form-group">
-      <input type="text" class="form-control" id="usr" placeholder="Title" ng-model="board.title">
+      <input type="text" class="form-control" id="usr" placeholder="Title" ng-model="board.title" ng-change="countLetters(board.title)">
     </div>
-    <div class="checkbox">
-      <label><input type="checkbox" ng-model="checkboxModel.ignoreCapitals">Ignore capitaliztion</label>
+    <div class="checkbox text-center">
+      <label><input type="checkbox" ng-model="checkboxModel.ignoreCapitals" ng-change="countLetters(board.title)">Ignore capitaliztion</label>
     </div>
     <p>
       <div id="results">
         Results:
-        <pre>{{countLetters(board.title)}}</pre>
+        <div class="letter-counts" ng-repeat="(letter, count) in letterCounts">
+          {{letter}}:{{count}}
+        </div>
       </div>
     </p>
     <div id="footer">
+      <p>This was created to help make the lives of Resident Assistants easier by doing some boring counting for them.</p>
+      <p>Questions? Comments? Concerns? Ideas? Find me on Twitter <a href="https://twitter.com/meibenny">@meibenny</a>.</p>
       <p>The source code for this is completely free and open source. It can be found at <a href="http://www.github.com/meibenny/countletters"
           target="_blank">github</a>.
         <br> Note: I make no guarantees concerning the accuracy of this tool. Everything should be verified by a human.
@@ -47,6 +51,7 @@
     <div id="changelog">
       <strong>Changelog</strong>
       <ul>
+        <li>October 21, 2016 - Added contact information</li>
         <li>August 17, 2016 - Fixed compatibility issues</li>
         <li>August 17, 2016 - Revert to old version to fix compatibility issues</li>
         <li>August 16, 2016 - The count of letters automatically update. Capital letters counted separately from lowercase letters.</li>
