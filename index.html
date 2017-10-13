@@ -36,8 +36,8 @@
     <p>
       <div id="results">
         Results:
-        <div class="letter-counts" ng-repeat="(letter, count) in letterCounts">
-          <div ng-class-odd="'same-row grey-row';" ng-class-even="'same-row';"><div>{{letter}}</div></div>:<input class="count-holder" ng-value="count">
+        <div ng-class-even="'letter-counts'" ng-class-odd="'letter-counts grey-row';" ng-repeat="(letter, count) in letterCounts">
+          <div class="same-row"><div>{{letter}}</div></div>:<div class="count-holder">{{count}}</div>
         </div>
       </div>
     </p>

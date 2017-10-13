@@ -46,7 +46,6 @@
 .count-holder {
   text-align: center;
   width: 30px;
-  color: black;
   display: inline-block;
 }
 
@@ -58,6 +57,5 @@
 
 .same-row {
   display: inline-block;
-  width: 5em;
   font-weight: bolder;
 }
